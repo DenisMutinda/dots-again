@@ -1,0 +1,107 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+window:
+  padding:
+    x: 15
+    y: 10
+
+scrolling:
+  history: 10000
+  multiplier: 1
+
+background_opacity: 0.5
+
+# Font configuration
+font:
+  normal:
+    family: FiraCode Nerd Font
+    style: Regular
+  
+  bold:
+    family: FiraCode Nerd Font
+    style: Bold
+
+  italic:
+    family: FiraCode Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: FiraCode Nerd Font
+    style: Bold Italic
+
+  size: 11
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+# Allow terminal applications to change Alacritty's window title.
+window.dynamic_title: true
+
+cursor:
+  style: Block
+
+live_config_reload: true
+
+# Shell
+#shell:
+  #  program: /bin/zsh
+
+mouse:
+  hide_when_typing: true
+
+  url:
+    launcher:
+      program: xdg-open
+    modifiers: Shift 
+
+# Mouse bindings
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+# Key bindings
+key_bindings:
+  - { key: V,        mods: Control|Shift,           action: Paste            }
+  - { key: C,        mods: Control|Shift,           action: Copy             }
+  #- { key: F,        mods: Control|Shift,           action: SearchForward    }
+  #- { key: B,        mods: Control|Shift,           action: SearchBackward   }
+  #- { key: C,        mods: Control|Shift, mode: Vi, action: ClearSelection   }
+  #- { key: Insert,   mods: Shift,                   action: PasteSelection   }
+  - { key: Key0,     mods: Control,                 action: ResetFontSize    }
+  - { key: Equals,   mods: Control,                 action: IncreaseFontSize }
+  - { key: Add,      mods: Control,                 action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,                 action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,                 action: DecreaseFontSize }
+
+# Colors (Gruvbox dark)
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '#1d2021'
+    background: '#282828'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+
+  # Bright colors
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
