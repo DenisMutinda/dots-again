@@ -12,6 +12,7 @@
 10. Fullscreen-complation-tagswapmon - throw all clients in that tag in a specific monitor to the other monitor.
 11. monitorrules - Define values per monitor.
 12. monitortags - different tags and/or icons on a per-monitor basis.
+13. savefloats - Save the floating dimensions.
 
 
 
