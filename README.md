@@ -16,7 +16,7 @@
 14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
 15. windowrolerule - differentiate between windows with different roles e.g Firefox browser and Preferences
 16. switchtag - when an application is lauched, we move to its tag.
-
+17. scratchpad - ( Launch an application with the hidden flag type "alacritty -t hidden" )
 
 
 

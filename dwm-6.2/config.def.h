@@ -159,6 +159,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+	{ MODKEY,                       XK_minus, scratchpad_show, {0} },
+	{ MODKEY|ShiftMask,             XK_minus, scratchpad_hide, {0} },
+	{ MODKEY,                       XK_equal,scratchpad_remove,{0} },
 	{ 0,                       XF86XK_MonBrightnessUp,    spawn,     {.v = brightnessup   } },
 	{ 0,                       XF86XK_MonBrightnessDown,    spawn,   {.v = brightnessdown } },
 	{ 0,                       XF86XK_AudioLowerVolume,     spawn,   {.v = voldown } },
