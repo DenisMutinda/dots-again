@@ -13,6 +13,20 @@
 11. monitorrules - Define values per monitor.
 12. monitortags - different tags and/or icons on a per-monitor basis.
 13. savefloats - Save the floating dimensions.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
+14. sendmon_keepfocus - keep the focus on a client when it is transferred to a new monitor.
 
 
 

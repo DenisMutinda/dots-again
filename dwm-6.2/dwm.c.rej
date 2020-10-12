@@ -1,30 +1,26 @@
 --- dwm.c
 +++ dwm.c
-@@ -1057,6 +1058,10 @@ manage(Window w, XWindowAttributes *wa)
- 	updatewindowtype(c);
- 	updatesizehints(c);
- 	updatewmhints(c);
-+	c->sfx = c->x;
-+	c->sfy = c->y;
-+	c->sfw = c->w;
-+	c->sfh = c->h;
- 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
- 	grabbuttons(c, 0);
- 	if (!c->isfloating)
-@@ -1715,8 +1720,16 @@ togglefloating(const Arg *arg)
+@@ -1412,15 +1412,21 @@ sendmon(Client *c, Monitor *m)
+ {
+ 	if (c->mon == m)
  		return;
- 	selmon->sel->isfloating = !selmon->sel->isfloating || selmon->sel->isfixed;
- 	if (selmon->sel->isfloating)
-+		/* restore last known float dimensions */
-+		resize(selmon->sel, selmon->sel->sfx, selmon->sel->sfy,
-+		       selmon->sel->sfw, selmon->sel->sfh, False);
-+	else {
-+		/* save last known float dimensions */
-+		selmon->sel->sfx = selmon->sel->x;
-+		selmon->sel->sfy = selmon->sel->y;
-+		selmon->sel->sfw = selmon->sel->w;
-+		selmon->sel->sfh = selmon->sel->h;
-+	}
- 	arrange(selmon);
++	int hadfocus = (c == selmon->sel);
+ 	unfocus(c, 1);
+ 	detach(c);
+ 	detachstack(c);
++	arrange(c->mon);
+ 	c->mon = m;
+ 	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
+ 	attach(c);
+ 	attachstack(c);
+-	focus(NULL);
+-	arrange(NULL);
++	arrange(m);
++	if (hadfocus) {
++		focus(c);
++		restack(m);
++	} else
++		focus(NULL);
  }
  
+ void
